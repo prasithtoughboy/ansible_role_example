@@ -1,5 +1,5 @@
 ---
-   - hosts: {{ webserver01 }}
+   - hosts: "{{ webserver01 }}"
      roles:
        - role: example
          when: action == "task1"

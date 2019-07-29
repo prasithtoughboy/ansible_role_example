@@ -1,0 +1,11 @@
+---
+  - name: Ansible check file exists.
+    stat:
+      path: /etc/issues
+    register: p
+  - debug:
+      msg: "File exists..."
+    when: p.stat.exists
+  - debug:
+      msg: "File not found"
+    when: p.stat.exists == False
